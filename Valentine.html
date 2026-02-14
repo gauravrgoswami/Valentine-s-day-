@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine 💖</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: white;
+            text-shadow: 2px 2px 5px #ff4e50;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 15px;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background-color: #ff4e50;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #444;
+            color: white;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.1);
+            background-color: #ff1e56;
+        }
+    </style>
+
+    <script>
+        function sayYes() {
+            document.body.innerHTML = `
+                <h1>Yayyyyy!!! 💖🥰</h1>
+                <h2>You said YES! 🎉</h2>
+                <p>Now you're officially my Valentine! ❤️</p>
+            `;
+        }
+
+        function sayNo() {
+            alert("Are you sure? 🥺");
+            setTimeout(function() {
+                alert("Really sure? 💔");
+            }, 500);
+
+            setTimeout(function() {
+                alert("Think again... 😏");
+            }, 1000);
+
+            setTimeout(function() {
+                alert("I'll ask again! 💌");
+            }, 1500);
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>Will You Be My Valentine? 💌</h1>
+
+<button class="btn" id="yesBtn" onclick="sayYes()">Yes 💖</button>
+<button class="btn" id="noBtn" onclick="sayNo()">No 😜</button>
+
+</body>
+</html>
